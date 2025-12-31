@@ -13,7 +13,11 @@
             <div class="nav_above_left">example @gmail.com</div>
             <div class="nav_above_right">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <i class="fa-solid fa-cart-shopping"></i>
+                <div id="cart-icon-container" class="cart-icon-wrapper">
+                    <i onclick="gotocart()" class="fa-solid fa-cart-shopping"></i>
+                    <span id="cart-count">0</span>
+                </div>
+                
                 <i class="fa-regular fa-comment"></i>
                 <i class="fa-regular fa-heart"></i>
             </div>
@@ -25,15 +29,15 @@
             <div class="nav_under_right">
                 <div class="links">
                     <ul>
-                        <li>Home</li>
-                        <li>Shop</li>
-                        <li>Community</li>
-                        <li>Blog</li>
-                        <li>About</li>
-                        <li>Contact</li>
+                        <li><a href="Home.html" target="_blank">Home</a></li>
+                        <li><a href="Products.html" target="_blank">Shop</a></li>
+                        <li><a href="cart.html" target="_blank">cart</a></li>
+                        <li><a href="#BS">Best Selling</a></li>
+                        <li><a href="#SO">special offers</a></li>
+                        <li><a href="#Serv">Services</a></li>
                     </ul>
                 </div>
-                <a href="Sign_in.html">Sign In</a>
+                <a href="Sign_in.html" target="_blank">Sign In</a>
             </div>
         </div>
     </nav>
@@ -106,7 +110,7 @@
 
 
 
-    <section class="best_seeling">
+    <section id="BS" class="best_seeling">
         <div class="header">
             <div>Best Selling</div>
             <button>See all</button>
@@ -236,7 +240,145 @@
 
 
 
-    <section class="specialofers">
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="SO" class="specialofers">
+    <div class="header">Special Offers</div>
+
+    <div class="body">
+        <div class="element">
+            <div class="element-inner">
+                <div class="element-front">
+                    <div class="left">
+                        <div class="leftabove">
+                            <button class="saving-btn">Big Saving</button>
+                            <div class="title">White Comfortable Chair</div>
+                        </div>
+                        <div class="leftunder">
+                            <span class="price">$429.00</span>
+                            <button class="buy-btn">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <img src="images/special_offers/all_three.png" alt="chair">
+                    </div>
+                </div>
+                <div class="element-back">
+                    <h3>Product Details</h3>
+                    <p>Designed for premium comfort using high-density foam and breathable fabric for long seating hours.</p>
+                    <button class="more-btn">View Details</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="element">
+            <div class="element-inner">
+                <div class="element-front">
+                    <div class="left">
+                        <div class="leftabove">
+                            <button class="saving-btn">Big Saving</button>
+                            <div class="title">White Comfortable Chair</div>
+                        </div>
+                        <div class="leftunder">
+                            <span class="price">$429.00</span>
+                            <button class="buy-btn">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <img src="images/special_offers/all_three.png" alt="chair">
+                    </div>
+                </div>
+                <div class="element-back">
+                    <h3>Ergonomic Design</h3>
+                    <p>Features adjustable height and lumbar support to ensure your posture stays perfect.</p>
+                    <button class="more-btn">View Details</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="element">
+            <div class="element-inner">
+                <div class="element-front">
+                    <div class="left">
+                        <div class="leftabove">
+                            <button class="saving-btn">Big Saving</button>
+                            <div class="title">White Comfortable Chair</div>
+                        </div>
+                        <div class="leftunder">
+                            <span class="price">$429.00</span>
+                            <button class="buy-btn">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <img src="images/special_offers/all_three.png" alt="chair">
+                    </div>
+                </div>
+                <div class="element-back">
+                    <h3>Modern Style</h3>
+                    <p>A minimalist aesthetic that fits perfectly in any modern living room or office space.</p>
+                    <button class="more-btn">View Details</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="element">
+            <div class="element-inner">
+                <div class="element-front">
+                    <div class="left">
+                        <div class="leftabove">
+                            <button class="saving-btn">Big Saving</button>
+                            <div class="title">White Comfortable Chair</div>
+                        </div>
+                        <div class="leftunder">
+                            <span class="price">$429.00</span>
+                            <button class="buy-btn">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <img src="images/special_offers/all_three.png" alt="chair">
+                    </div>
+                </div>
+                <div class="element-back">
+                    <h3>Durable Quality</h3>
+                    <p>Built with a reinforced steel frame and premium upholstery for lifetime durability.</p>
+                    <button class="more-btn">View Details</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+    <section id="SO" class="specialofers">
         <div class="header">special offers</div>
 
         <div class="body">
@@ -309,7 +451,7 @@
             </div>
 
         </div>
-    </section>
+    </section> -->
 
 
 
@@ -318,7 +460,7 @@
 
 
 
-<section class="services">
+<section id="Serv" class="services">
     <div class="header">Services</div>
     <div class="body">
         <div class="above">
@@ -352,57 +494,70 @@
 
 
 
-
-<footer class="footer">
-   
-        <div class="one">
-            <img src="images/nav_image/left.png" alt="">
-            <div>Lorem Ipsum is simply <br> dummy text of the site.</div>
-            <ul>
-                <li> <i class="fa-solid fa-location-dot"></i> <span>Ismailia</span></li>
-                <li> <i class="fa-solid fa-phone"></i> <span>01283272897</span></li>
-                <li> <i class="fa-solid fa-envelope"></i> <span>3mr@gmail.com</span></li>
-            </ul>
-        </div>  
-        <div class="two">
-            <ul>
-                <li>Company</li>
-                <li>About</li>
-                <li>All products</li>
-                <li>Login</li>
-                <li>Community</li>
-            </ul>
+<footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-col brand-col">
+            <img src="images/nav_image/left.png" alt="Furniture Logo" class="footer-logo">
+            <p class="brand-desc">Lorem Ipsum is simply dummy text of the site.</p>
+            <div class="contact-info">
+                <p><i class="fa-solid fa-location-dot"></i> Ismailia</p>
+                <p><i class="fa-solid fa-phone"></i> 01234567890</p>
+                <p><i class="fa-solid fa-envelope"></i> example@gmail.com</p>
+            </div>
         </div>
-        <div class="three">
-            
+
+        <div class="footer-col">
+            <h3>Company</h3>
             <ul>
-                <li>Categories</li>
-                <li>Sofas <span>table</span></li>
-                <li>Lamps <span>Doors</span></li>
-                <li>Chairs<span>Drawers</span></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">All Products</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Community</a></li>
             </ul>
         </div>
 
-        <div class="four">
+        <div class="footer-col categories-col">
+            <h3>Categories</h3>
+            <div class="categories-list">
+                <ul>
+                    <li><a href="#">Sofas</a></li>
+                    <li><a href="#">Lamps</a></li>
+                    <li><a href="#">Chairs</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Tables</a></li>
+                    <li><a href="#">Doors</a></li>
+                    <li><a href="#">Drawers</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h3>Customer Care</h3>
             <ul>
-                <li>Customer Care</li>
-                <li>Contact Us</li>
-                <li>Live Chat</li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Live Chat</a></li>
             </ul>
         </div>
-        <i class="fa-solid fa-chevron-up"></i>
-</footer>
-<div class="afterfooter">
-    <div class="left">@ 2023, All Rights are Reserved</div>
-    <div class="right">
-        <i class="fa-brands fa-facebook-f"></i>
-        <i class="fa-brands fa-twitter"></i>
-        <i class="fa-brands fa-instagram"></i>
     </div>
-</div>
+
+    <div class="footer-bottom">
+        <div class="bottom-container">
+            <p>&copy; 2023, All Rights are Reserved</p>
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" class="scroll-up-btn"><i class="fa-solid fa-chevron-up"></i></a>
+</footer>
 
 
 
+<script src="products.js"></script>
 
 </body>
 </html>

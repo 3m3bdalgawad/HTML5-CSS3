@@ -6,15 +6,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="Products.css">
-    <title>Document</title>
+    <title>Shop</title>
 </head>
 <body>
-     <nav>
+    <nav>
         <div class="nav_above">
             <div class="nav_above_left">example @gmail.com</div>
             <div class="nav_above_right">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <i class="fa-solid fa-cart-shopping"></i>
+                <div id="cart-icon-container" class="cart-icon-wrapper">
+                    <i onclick="gotocart()" class="fa-solid fa-cart-shopping"></i>
+                    <span id="cart-count">0</span>
+                </div>
+                
                 <i class="fa-regular fa-comment"></i>
                 <i class="fa-regular fa-heart"></i>
             </div>
@@ -26,24 +30,29 @@
             <div class="nav_under_right">
                 <div class="links">
                     <ul>
-                        <li>Home</li>
-                        <li>Shop</li>
-                        <li>Community</li>
-                        <li>Blog</li>
-                        <li>About</li>
-                        <li>Contact</li>
+                        <li><a href="Home.html" target="_blank">Home</a></li>
+                        <li><a href="Products.html" target="_blank">Shop</a></li>
+                        <li><a href="cart.html" target="_blank">cart</a></li>
+                        <li><a href="#BS">Best Selling</a></li>
+                        <li><a href="#SO">special offers</a></li>
+                        <li><a href="#Serv">Services</a></li>
                     </ul>
                 </div>
-                <a href="Sign_in.html">Sign In</a>
+                <a href="Sign_in.html" target="_blank">Sign In</a>
             </div>
         </div>
     </nav>
 
 
 
+
+
     <section class="section_one">
         <div class="shop">Shop</div>
-        <div class="home_Shop">Home <i class="fa-solid fa-caret-right"></i><span>Shop</span> </div>
+        <div class="home_Shop">
+            Home <i class="fa-solid fa-caret-right"></i>
+            <span>Shop</span>
+        </div>
     </section>  
 
 
@@ -57,6 +66,64 @@
 
 
 
+
+
+
+
+<section class="Shop_Page">
+    <aside class="filter">
+        <div class="input"> 
+            <i class="fa-solid fa-magnifying-glass"></i> 
+            <input type="text" id="searchInput" placeholder="Search products...">
+        </div>
+
+        <div class="header">Filter By</div>
+        
+        <div class="price-filter-container">
+            <p>Price</p>
+            <input type="range" id="priceRange" min="0" max="10000" value="10000" class="custom-range">
+            <div class="price-labels">
+                <span>$0</span>
+                <span id="priceValue">$1000</span>
+            </div>
+        </div>
+
+        <div class="categories">
+            <p>Categories</p>
+            <ul id="categoryList">
+                <li class="active" data-category="all">All</li>
+                <li data-category="furniture">Furniture</li>
+                <li data-category="home-decoration">Home Decoration</li>
+                <li data-category="laptops">Laptops</li>
+                <li data-category="fragrances">Fragrances</li>
+            </ul>
+        </div>
+
+        <div class="color">
+            <p>Color</p>
+            <ul>
+                <li>All</li>
+                <li>White</li>
+                <li>Blue</li>
+                <li>Brown</li>
+                <li>Black</li>
+            </ul>
+        </div>
+    </aside>
+
+    <div id="productsContainer" class="products-grid">
+        </div>
+</section>
+
+
+
+
+
+
+
+
+
+<!-- 
     <section class="Shop_Page">
         <aside class="filter">
             <div class="input"> <i class="fa-solid fa-magnifying-glass"></i> <input type="text" placeholder="Search"></div>
@@ -92,73 +159,78 @@
         </main>
 
 
-
-
-
-
-
-
-
     </section>
+     -->
     
-    
-    
-   
 
 
 
+     
 
-
-
-
-    
-<footer class="footer">
-   
-        <div class="one">
-            <img src="images/nav_image/left.png" alt="">
-            <div>Lorem Ipsum is simply <br> dummy text of the site.</div>
-            <ul>
-                <li> <i class="fa-solid fa-location-dot"></i> <span>Ismailia</span></li>
-                <li> <i class="fa-solid fa-phone"></i> <span>01283272897</span></li>
-                <li> <i class="fa-solid fa-envelope"></i> <span>3mr@gmail.com</span></li>
-            </ul>
-        </div>  
-        <div class="two">
-            <ul>
-                <li>Company</li>
-                <li>About</li>
-                <li>All products</li>
-                <li>Login</li>
-                <li>Community</li>
-            </ul>
+<footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-col brand-col">
+            <img src="images/nav_image/left.png" alt="Furniture Logo" class="footer-logo">
+            <p class="brand-desc">Lorem Ipsum is simply dummy text of the site.</p>
+            <div class="contact-info">
+                <p><i class="fa-solid fa-location-dot"></i> Ismailia</p>
+                <p><i class="fa-solid fa-phone"></i> 01234567890</p>
+                <p><i class="fa-solid fa-envelope"></i> example@gmail.com</p>
+            </div>
         </div>
-        <div class="three">
-            
+
+        <div class="footer-col">
+            <h3>Company</h3>
             <ul>
-                <li>Categories</li>
-                <li>Sofas <span>table</span></li>
-                <li>Lamps <span>Doors</span></li>
-                <li>Chairs<span>Drawers</span></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">All Products</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Community</a></li>
             </ul>
         </div>
 
-        <div class="four">
+        <div class="footer-col categories-col">
+            <h3>Categories</h3>
+            <div class="categories-list">
+                <ul>
+                    <li><a href="#">Sofas</a></li>
+                    <li><a href="#">Lamps</a></li>
+                    <li><a href="#">Chairs</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Tables</a></li>
+                    <li><a href="#">Doors</a></li>
+                    <li><a href="#">Drawers</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h3>Customer Care</h3>
             <ul>
-                <li>Customer Care</li>
-                <li>Contact Us</li>
-                <li>Live Chat</li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Live Chat</a></li>
             </ul>
         </div>
-        <i class="fa-solid fa-chevron-up"></i>
-</footer>
-<div class="afterfooter">
-    <div class="left">@ 2023, All Rights are Reserved</div>
-    <div class="right">
-        <i class="fa-brands fa-facebook-f"></i>
-        <i class="fa-brands fa-twitter"></i>
-        <i class="fa-brands fa-instagram"></i>
     </div>
-</div>
+
+    <div class="footer-bottom">
+        <div class="bottom-container">
+            <p>&copy; 2023, All Rights are Reserved</p>
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" class="scroll-up-btn"><i class="fa-solid fa-chevron-up"></i></a>
+</footer>
+
+
+
+
 
     <script src="products.js"></script>
 

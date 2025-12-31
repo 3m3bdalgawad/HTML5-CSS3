@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cart.css">
+    <title>Cart</title>
+</head>
+<body>
+    <section class="cart">
+
+
+
+<div class="left">
+    <button class="header_clear_cart" onclick="clearCart()">Clear Cart</button>
+    <div class="body" id="cart-items-container"></div> 
+    
+    <button class="footer_continue_shoping" onclick="window.location.href='products.html'">Continue Shopping</button>
+</div>
+
+
+
+
+        <!-- <div class="left">
+                <button class="header_clear_cart">Clear Cart</button>
+                <div class="body">
+                    
+                        <img src="images/best_seeling/five_left.jpg" alt="">
+                        <div class="item_info">
+                            <h3> Teakwood Rattan Armchair </h3>
+                            <button class="remove">remove</button>
+                        </div>
+                        <div class="body_right">
+                            <strong class="price">9000$</strong>
+                            <div class="quantity-controls">
+                                <button>-</button>
+                                <input type="number" value="1">
+                                <button>+</button>
+                            </div>
+                        </div>
+                    
+                </div>
+                <button class="footer_continue_shoping">continue shoping</button>
+        </div>        -->
+
+
+
+
+
+        <div class="right">
+    <h3 class="cart_total">Cart total</h3>
+    <div class="sub_total">
+        <span>sub total</span> 
+        <span id="subtotal-price">$0</span> 
+    </div>
+    <div class="coupon_code">
+        <input type="text" placeholder="Enter Coupon Code">
+        <button>Apply</button>
+    </div>
+    <div class="total_amount">
+        <span>total amount</span>  
+        <strong id="total-price">$0</strong>
+    </div>
+    <button class="check_out">check out</button>
+</div>
+        <!-- <div class="right">
+            <h3 class="cart_total">
+                Cart total
+            </h3>
+            <div class="sub_total">
+                <span>sub total</span> 
+                <span>$27.000</span> 
+            </div>
+            <div class="coupon_code">
+                <input type="text" placeholder="Enter Coupon Code">
+                <button>Apply</button>
+            </div>
+            <div class="total_amount">
+                <span>total amount</span>  
+                <strong>$27.000</strong>
+            </div>
+            <button class="check_out">check out</button>
+        </div> -->
+
+    </section>
+
+    <script src="cart.js"></script>
+</body>
+</html>
